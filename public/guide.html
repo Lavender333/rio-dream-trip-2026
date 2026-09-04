@@ -1391,7 +1391,17 @@ html&gt;body{padding:0}&lt;/style&gt;
     stay.append(&quot;text&quot;).attr(&quot;class&quot;,&quot;pin-text&quot;).text(d=&gt;d.n);
   }
   select.addEventListener(&quot;change&quot;,()=&gt;{selected=stays.find(s=&gt;s.id===select.value);updateDetails();draw();});
-  window.addEventListener(&quot;message&quot;,(event)=&gt;{const stayId=event.data?.rioStay;if(stays.some(s=&gt;s.id===stayId)){select.value=stayId;selected=stays.find(s=&gt;s.id===stayId);updateDetails();draw();root.scrollIntoView({behavior:&quot;smooth&quot;,block:&quot;start&quot;});}});
+  function showPlanContext(plan){
+    if(!plan)return;
+    let context=root.querySelector(&quot;#rio-plan-context&quot;);
+    if(!context){context=document.createElement(&quot;div&quot;);context.id=&quot;rio-plan-context&quot;;context.style.cssText=&quot;margin:12px 0;padding:12px;border-left:5px solid var(--viz-series-2);background:var(--card);&quot;;root.prepend(context);}
+    const outbound={wed:&quot;Arrive Thu Sep 24&quot;,thu:&quot;Arrive Fri Sep 25&quot;,fri:&quot;Arrive Sat Sep 26&quot;}[plan.departure]||&quot;Arrival not selected&quot;;
+    const returning=plan.returnDay===&quot;mon&quot;?&quot;Leave Rio Mon Sep 28 · Monday is airport / packing only&quot;:&quot;Leave Rio Tue Sep 29 · Monday remains open for Little Africa or recovery&quot;;
+    const labels={beach:&quot;Ipanema / beach day&quot;,shopping:&quot;Mall shopping&quot;,game:&quot;Maracanã game&quot;,forest:&quot;Tijuca Forest&quot;,africa:&quot;Little Africa&quot;};
+    const chosen=(plan.activities||[]).map(id=&gt;labels[id]||attractions.find(a=&gt;a.id===id)?.name).filter(Boolean).join(&quot; · &quot;)||&quot;All activities shown&quot;;
+    context.innerHTML=&quot;&lt;strong&gt;Your selected trip&lt;/strong&gt;&lt;br&gt;&quot;+outbound+&quot; · &quot;+returning+&quot;&lt;br&gt;&lt;span class=&quot;text-muted&quot;&gt;Chosen experiences: &quot;+chosen+&quot;. The highlighted stay and its distances below match this plan.&lt;/span&gt;&quot;;
+  }
+  window.addEventListener(&quot;message&quot;,(event)=&gt;{const stayId=event.data?.rioStay;if(stays.some(s=&gt;s.id===stayId)){select.value=stayId;selected=stays.find(s=&gt;s.id===stayId);updateDetails();draw();root.scrollIntoView({behavior:&quot;smooth&quot;,block:&quot;start&quot;});}showPlanContext(event.data?.rioPlan);});
   new ResizeObserver(draw).observe(root);
   updateDetails();draw();
 })();
@@ -1751,9 +1761,11 @@ html&gt;body{padding:0}&lt;/style&gt;
 "></iframe>
 <script>
 (() => {
-  const stay = new URLSearchParams(window.location.search).get('stay');
+  const params = new URLSearchParams(window.location.search);
+  const stay = params.get('stay');
   const frame = document.querySelector('iframe[title="Rio Stay Map"]');
-  if (stay && frame) frame.addEventListener('load', () => frame.contentWindow?.postMessage({ rioStay: stay }, '*'));
+  const rioPlan = { departure: params.get('departure'), returnDay: params.get('returnDay'), activities: (params.get('activities') || '').split(',').filter(Boolean) };
+  if (frame) frame.addEventListener('load', () => frame.contentWindow?.postMessage({ rioStay: stay, rioPlan }, '*'));
 })();
 </script>
 </body>
