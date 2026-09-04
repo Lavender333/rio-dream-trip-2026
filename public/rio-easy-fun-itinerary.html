@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rio Easy + Fun Itinerary</title>
+  <style>
+    :root{--navy:#10243b;--gold:#c89645;--red:#c62828;--ink:#172335;--muted:#627083;--line:#d8dee6;--soft:#f3f6f9;--warm:#fbf6ed;--game:#fdecec;--white:#fff}
+    *{box-sizing:border-box} body{margin:0;background:var(--white);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:#185a91} .wrap{width:min(920px,100%);margin:auto;padding:22px 18px 50px}
+    .toplink{display:inline-block;margin-bottom:18px;text-decoration:none;font-weight:700}
+    h1{font-size:clamp(30px,7vw,52px);line-height:1.04;margin:0;color:var(--navy);letter-spacing:-.025em}
+    h2{font-size:24px;line-height:1.2;color:var(--navy);margin:30px 0 12px} h3{font-size:19px;margin:0 0 5px;color:var(--navy)}
+    p{margin:6px 0 12px}.sub{font-size:18px;color:var(--muted);max-width:720px}.hero{border-bottom:3px solid var(--gold);padding-bottom:20px}
+    .base{margin:20px 0;padding:16px;border-left:6px solid var(--gold);background:var(--warm)}
+    .base strong{color:var(--navy)}
+    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.principles div{background:var(--soft);padding:12px;font-weight:700;text-align:center}
+    .game{background:var(--game)!important;border:2px solid var(--red)!important}.game .day,.game h3,.game .time{color:var(--red)!important}
+    .daycard{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .day{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.04em}.time{font-weight:800;color:var(--navy)}
+    .plan{display:grid;gap:10px}.slot{padding-left:14px;border-left:3px solid var(--line)}.slot p{margin:2px 0;color:var(--muted)}
+    .rest{background:var(--soft);padding:8px 10px;border-left-color:var(--gold)}
+    .why{font-size:14px;color:var(--muted);margin-top:12px}.tag{display:inline-block;background:var(--navy);color:var(--white);font-size:13px;font-weight:700;padding:3px 8px;margin:0 5px 5px 0}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:9px}.checklist label{display:flex;gap:9px;align-items:flex-start;background:var(--soft);padding:11px}.checklist input{width:20px;height:20px;flex:0 0 auto}
+    .culture{background:var(--warm);border:1px solid var(--gold);padding:16px;margin-top:22px}.culture-grid,.totals{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.culture-grid div{border-top:1px solid var(--line);padding-top:10px}.totals{grid-template-columns:repeat(3,1fr);margin:12px 0}.totals div{background:var(--navy);color:var(--white);padding:14px}.totals strong,.totals small{display:block}.totals strong{font-size:21px;margin:4px 0}
+    table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid var(--line)}th{background:var(--navy);color:var(--white)}
+    .footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+    @media(max-width:650px){.principles,.culture-grid,.totals{grid-template-columns:1fr}.daycard{grid-template-columns:1fr;gap:8px}.checklist{grid-template-columns:1fr}.wrap{padding:18px 14px 40px}th,td{padding:8px;font-size:14px}}
+    @media print{.toplink,.checklist input{display:none}.wrap{width:100%;padding:10mm}.daycard{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <a class="toplink" href="rio-trip-interactive-map.html">← Full map, lodging and distance guide</a>
+  <header class="hero">
+    <h1>Rio, the easy + fun way</h1>
+    <p class="sub">A low-stress plan beginning with the shared overnight flight on Wednesday, September 23 and continuing through Tuesday, September 29, 2026. It keeps the iconic Rio experience, but limits backtracking, decision overload and overpacked days.</p>
+    <div class="base"><strong>Recommended base: Airbnb #1, the Harbourside 6-bedroom villa in Santa Teresa.</strong> It gives the easiest access to Maracanã, Lapa and Little Africa while keeping Christ, Sugarloaf and the beaches manageable with a private driver. Choose Airbnb #4, Rio001 in Copacabana, if beachfront energy and a host-advertised 24/7 concierge matter more than game-day convenience.</div>
+    <div class="principles"><div>One main anchor each day</div><div>Rest before every evening event</div><div>Private driver for fixed-time plans</div></div>
+  </header>
+
+  <section class="culture" aria-labelledby="culture-title">
+    <h2 id="culture-title">Rio culture — without the culture shock</h2>
+    <p><strong>Carioca culture</strong> blends African, European and Indigenous influences with an outdoor, expressive social rhythm shaped by the mountains, city and sea.</p>
+    <div class="culture-grid">
+      <div><h3>Music, beach and football</h3><p>Samba grew through Afro-Brazilian communities; bossa nova emerged around Copacabana and Ipanema; funk carioca is rooted in favela communities. The beach is Rio’s living room, and Maracanã match day is loud, emotional and communal.</p></div>
+      <div><h3>What “favela” means</h3><p>A favela is a real residential community—not a tourist set and not a synonym for crime. These neighborhoods grew through collective responses to unmet housing needs and can combine strong local culture and business with uneven services. Visit only with a reputable, preferably resident-led guide; ask before photographing people or homes and do not wander in because a map route looks short.</p></div>
+      <div><h3>Everyday rhythm</h3><p>Greet people before asking for help. Try <em>bom dia</em>, <em>por favor</em> and <em>obrigado/obrigada</em>. Meals may move slowly. Try feijoada, botecos, coxinha, coconut water and a carefully paced caipirinha.</p></div>
+      <div><h3>First-day reset</h3><p>Keep Thursday light: driver, property, food, hydration and one short accompanied walk. Carry little jewelry, keep phones discreet near curbs and crowds, and add quiet breaks whenever energy or attention drops.</p></div>
+      <div><h3>Keep the phone</h3><p>Before travel, enable Find My/Find My Device, backups, a strong passcode and theft protection; save the IMEI, carrier and bank numbers off-device. On the street, keep it zipped in a cross-body bag worn in front and step inside a hotel, shop, restaurant or car before checking it. Never leave it under a beach towel.</p></div>
+      <div><h3>If it is stolen</h3><p>Do not chase or resist. Move somewhere secure; from another device, lock/erase the phone, block the SIM/eSIM and IMEI, contact banks through official channels, change critical passwords and file a police report. Call 190 only for an immediate emergency.</p></div>
+    </div>
+    <p class="why">At Maracanã, carry only essentials and pre-write the gate, seat and chauffeur meeting point so the phone can stay put. Brazil’s Celular Seguro may help eligible users alert participating carriers and banks; foreign visitors should verify eligibility before relying on it.</p>
+  </section>
+
+  <section aria-labelledby="budget-title">
+    <h2 id="budget-title">Travel cost per person — housing excluded</h2>
+    <div class="base"><strong>Travel means airfare and ground transportation only.</strong> It does not include the Airbnb, activities or food. USD conversions use US$1 = R$5.157. The requested nonstop lie-flat fare was not displayed, so the recommended reserve adds a 15–25% airfare cushion.</div>
+    <table>
+      <thead><tr><th>Traveler</th><th>Travel-only floor</th><th>Recommended travel reserve</th><th>Full easy + fun plan, no housing</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Cleveland</td><td>$3,827–$3,924</td><td><strong>$4,307–$4,723</strong></td><td><strong>$4,957–$5,589</strong></td></tr>
+        <tr><td>2 · Punta Cana / Detroit</td><td>$3,952–$4,049</td><td><strong>$4,432–$4,848</strong></td><td><strong>$5,082–$5,714</strong></td></tr>
+        <tr><td>3 · Fort Lauderdale</td><td>$3,666–$3,763</td><td><strong>$4,146–$4,562</strong></td><td><strong>$4,796–$5,428</strong></td></tr>
+      </tbody>
+    </table>
+    <p><strong>What the full-plan total adds:</strong> $650–$866 per person for the Friday landmark tour, Salgueiro rehearsal, Tijuca, bike, Little Africa guide, Bar do Mineiro, beach snacks, remaining meals and a value-tier NFL ticket. Premium NFL ticket: add about $208; high/hospitality tier: add about $887, before fees.</p>
+    <p class="why">Ground assumption: R$4,500–R$6,000 per vehicle, or $291–$388 per traveler, for three people sharing airport transfers and a bilingual executive chauffeur on the main touring/game days. The full-plan total still excludes housing, chef, concierge, photographer, shopping, travel insurance, armored vehicle and licensed close protection.</p>
+  </section>
+
+  <section aria-labelledby="tour-option-title">
+    <h2 id="tour-option-title">Easy all-in-one Friday option</h2>
+    <div class="base"><strong>Christ by Train, Sugarloaf, Selarón &amp; BBQ:</strong> an eight-hour English-language group tour with the Corcovado train, Christ the Redeemer, an external Maracanã stop, Sambadrome, Metropolitan Cathedral, Selarón Steps, Brazilian barbecue lunch and Sugarloaf cable cars. Tickets, guide, air-conditioned transportation and lunch are listed as included; drinks and optional gratuities are not.</div>
+    <table>
+      <thead><tr><th>Best for</th><th>Price</th><th>Important pickup rule</th></tr></thead>
+      <tbody><tr><td>People who want one reservation and minimal planning.</td><td>Airbnb was shown from US$165 per guest; Expedia recently showed about US$175 per adult. Recheck live pricing and cancellation terms.</td><td>The selected option displays <strong>Hotels in Copacabana</strong> as the Meeting/Redemption Point. Do not assume pickup at an Airbnb. Use the exact Copacabana hotel, address and time assigned in the booking confirmation unless the operator confirms another meeting point in writing.</td></tr></tbody>
+    </table>
+    <p><a href="https://www.airbnb.com/experiences/7133882?checkin=2026-09-24&amp;checkout=2026-09-29&amp;location=Rio%20de%20Janeiro%2C%20Brazil&amp;currentTab=experience_tab">Check Airbnb Experience dates</a> · <a href="https://www.expedia.com/things-to-do/full-day-in-rio-christ-by-train-sugarloaf-city-tour-bbq.a564731.activity-details?location=Rio%20de%20Janeiro%2C%20Brazil&amp;startDate=2026-09-24&amp;endDate=2026-09-29">Check Expedia dates</a></p>
+    <p class="why"><strong>Tradeoff:</strong> it is a long, structured group day with less control over rest and photography stops, and Sugarloaf sunset is not guaranteed. If booked, it replaces the separate Friday Christ, Sugarloaf and lunch plans. Keep Monday for Little Africa and Pedra do Sal.</p>
+  </section>
+
+  <section aria-labelledby="flights-title">
+    <h2 id="flights-title">First: everyone flies to A = GIG</h2>
+    <div class="base"><strong>Best route from the supplied flight map:</strong> meet at Miami International Airport on Wednesday, September 23. All three then fly nonstop overnight to Rio on AA905, sleep on the plane in requested lie-flat Business pods and arrive at GIG Thursday morning. No Miami hotel.</div>
+    <table>
+      <thead><tr><th>Traveler</th><th>Route to the Miami meeting point</th><th>Timing</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Cleveland</td><td>AA2887 · CLE → MIA</td><td>6:25 AM → 9:20 AM; wait 13 hr 35 min</td></tr>
+        <tr><td>2 · Punta Cana</td><td>AA2638 · PUJ → MIA</td><td>12:02 PM → 2:39 PM; wait 8 hr 16 min and clear immigration</td></tr>
+        <tr><td>3 · Fort Lauderdale</td><td>Drive FLL area → MIA</td><td>Leave about 6:30–7:00 PM; target arrival by 8:00 PM</td></tr>
+        <tr><td><strong>All three</strong></td><td><strong>AA905 · MIA → GIG nonstop</strong></td><td><strong>Wed 10:55 PM → Thu 8:20 AM</strong></td></tr>
+      </tbody>
+    </table>
+    <p><strong>Arrival connection:</strong> A/GIG → Airbnb #1 by pre-booked private van, normally about 30–50 minutes. The flight gets everyone to A; the van completes the journey to the property.</p>
+    <h3>Return</h3>
+    <p>All three take AA904 nonstop from GIG at 10:10 PM Tuesday, September 29, arriving MIA at 5:50 AM Wednesday. After immigration and bags, Traveler 1 continues to Cleveland, Traveler 2 continues to Detroit, and Traveler 3 drives to the Fort Lauderdale area. Keep at least a three-hour onward-flight buffer.</p>
+    <p class="why"><strong>Do not treat the airfare in the source PDF as a final quote.</strong> The exact AA905/AA904 nonstop pod fare was not displayed as bookable. Reconfirm the schedule, aircraft, lie-flat seat map, baggage and total price before purchase.</p>
+  </section>
+
+  <section aria-labelledby="transport-title">
+    <h2 id="transport-title">Transportation plan</h2>
+    <div class="base"><strong>Easiest choice for the group:</strong> reserve one bilingual chauffeur and a large van or Sprinter for airport transfers, touring days and the football game. Confirm passenger capacity, luggage space, waiting time, parking, overtime and the exact game-day pickup point in the written quote.</div>
+    <table>
+      <thead><tr><th>Trip segment</th><th>Recommended transportation</th><th>Planning time / cost</th></tr></thead>
+      <tbody>
+        <tr><td>GIG → Airbnb #1</td><td>Pre-booked private van with airport meet-and-greet, flight monitoring, name sign and luggage assistance.</td><td>About 30-50 min; a dedicated executive vehicle requires a written quote.</td></tr>
+        <tr><td>Friday landmarks</td><td>Keep the same driver from Santa Teresa → Cosme Velho → rest stop → Urca/Sugarloaf → dinner/home.</td><td>Airbnb #1 to Christ: 20-35 min. Airbnb #1 to Sugarloaf: 25-40 min.</td></tr>
+        <tr><td>Saturday nature + beach</td><td>Private guide vehicle for Tijuca, then driver to Ipanema. Walk once you reach the beachfront.</td><td>Tijuca: 25-45 min. Ipanema: 30-50 min from Airbnb #1.</td></tr>
+        <tr class="game"><td>Sunday NFL game</td><td><strong>Primary:</strong> dedicated driver to the official traffic/drop boundary, then walk. Arrange a fixed postgame meeting point away from the stadium.</td><td>About 30-50 min from Airbnb #1 before event delays. Leave roughly 2½-3 hours before kickoff.</td></tr>
+        <tr class="game"><td>Game-day backup</td><td><strong>MetrôRio Line 2 to São Cristóvão</strong>, an official access station for Maracanã. Buy/reload before game day or use contactless payment.</td><td>R$7.90 per ride. Normal Sunday hours shown as 7 AM-11 PM; verify the special NFL operation closer to the event.</td></tr>
+        <tr><td>Monday history + samba</td><td>Driver drop in Saúde for the walking tour; keep the vehicle available or pre-set a pickup after Pedra do Sal.</td><td>About 15-25 min from Airbnb #1. Most of the experience is on foot.</td></tr>
+        <tr><td>Beachfront cycle</td><td>Use Bike Itaú for the dedicated bike path; do not take the bicycle into heavy street traffic.</td><td>R$32.90 for a 48-hour leisure plan when checked.</td></tr>
+        <tr><td>Airbnb #1 → GIG</td><td>Pre-booked private van. Build in airline check-in time plus a traffic cushion.</td><td>About 30-50 min in ordinary traffic; allow more during peak periods.</td></tr>
+      </tbody>
+    </table>
+    <p class="why">If staying in Copacabana instead, airport and Maracanã drives are usually longer, but the beach cycle, Ipanema and Sugarloaf become easier. Keep the same chauffeur strategy.</p>
+  </section>
+
+  <section aria-labelledby="plan-title">
+    <h2 id="plan-title">The logical itinerary</h2>
+
+    <article class="daycard">
+      <div><div class="day">Wednesday</div><strong>Sep 23</strong><br><span class="tag">FLIGHT</span></div>
+      <div><h3>Meet in Miami and fly overnight to Rio</h3><div class="plan">
+        <div class="slot"><span class="time">Morning / afternoon</span><p>Cleveland and Punta Cana travelers fly to MIA. Fort Lauderdale traveler drives to MIA in the evening.</p></div>
+        <div class="slot rest"><span class="time">By 8:00 PM</span><p>All three are together at MIA with bags checked and time for dinner or the lounge.</p></div>
+        <div class="slot"><span class="time">10:55 PM</span><p>AA905 departs nonstop for GIG. Overnight is on the aircraft, not in a hotel.</p></div>
+      </div><p class="why">Why it works: one shared international flight, no Houston connection and no Miami hotel.</p></div>
+    </article>
+
+    <article class="daycard">
+      <div><div class="day">Thursday</div><strong>Sep 24</strong><br><span class="tag">ARRIVAL</span></div>
+      <div><h3>Land, settle in, do almost nothing</h3><div class="plan">
+        <div class="slot"><span class="time">Arrival</span><p>Pre-arranged GIG airport pickup. Go directly to the property.</p></div>
+        <div class="slot rest"><span class="time">Evening</span><p>Villa dinner or one nearby reservation. No sightseeing target.</p></div>
+      </div><p class="why">Why it works: no pressure after an international flight, and everyone starts Friday rested.</p></div>
+    </article>
+
+    <article class="daycard">
+      <div><div class="day">Friday</div><strong>Sep 25</strong><br><span class="tag">ICONS</span></div>
+      <div><h3>Choose one: relaxed private day or all-in-one tour</h3><div class="plan">
+        <div class="slot"><span class="time">Relaxed plan</span><p>Driver to Cosme Velho for the Corcovado train and Christ, a long lunch/rest break, then Sugarloaf through sunset.</p></div>
+        <div class="slot"><span class="time">All-in-one plan</span><p>Take the eight-hour Christ by Train, Sugarloaf, Selarón &amp; BBQ tour. Have the private driver take the group to the exact Copacabana hotel meeting point shown in the confirmation.</p></div>
+      </div><p class="why">The tour reduces planning and adds Selarón, the Cathedral, Sambadrome and lunch. The private plan protects downtime, flexible photography and the sunset target.</p></div>
+    </article>
+
+    <article class="daycard">
+      <div><div class="day">Saturday</div><strong>Sep 26</strong><br><span class="tag">NATURE</span><span class="tag">BEACH</span></div>
+      <div><h3>Tijuca Forest, then Ipanema at your own pace</h3><div class="plan">
+        <div class="slot"><span class="time">8:30 AM-12:30 PM</span><p>Private Tijuca Forest guide, short trails, waterfall stops and wildlife. Ask for a flexible route.</p></div>
+        <div class="slot rest"><span class="time">1:00-4:00 PM</span><p>Lunch and downtime. Pool, nap or quiet time.</p></div>
+        <div class="slot"><span class="time">4:30-7:00 PM</span><p>Ipanema and Arpoador sunset. Coconut water, swimming and people-watching with no rigid schedule.</p></div>
+        <div class="slot"><span class="time">Optional evening</span><p>Private beginner samba lesson at the property. Skip it if the group needs energy for Sunday.</p></div>
+      </div><p class="why">Why it works: active morning, unstructured beach payoff and an optional—not mandatory—evening.</p></div>
+    </article>
+
+    <article class="daycard game">
+      <div><div class="day">Sunday</div><strong>Sep 27</strong><br><span class="tag">MAIN EVENT</span></div>
+      <div><h3>Ravens vs. Cowboys at Maracanã</h3><div class="plan">
+        <div class="slot"><span class="time">9:30-11:00 AM</span><p>Optional easy Copacabana beachfront cycle. Keep it short and turn back whenever it stops being fun.</p></div>
+        <div class="slot rest"><span class="time">11:30 AM-2:00 PM</span><p>Brunch, shower and downtime at the property.</p></div>
+        <div class="slot"><span class="time">About 2:30 PM</span><p>Leave for Maracanã with a dedicated driver. Exact departure should follow official gate-opening and security guidance.</p></div>
+        <div class="slot"><span class="time">5:25 PM</span><p><strong>Baltimore Ravens vs. Dallas Cowboys. Maracanã Stadium.</strong></p></div>
+        <div class="slot"><span class="time">After the game</span><p>Driver pickup at a pre-agreed meeting point. No formal late dinner reservation.</p></div>
+      </div><p class="why">Why it works: the game owns the day. Everything else is optional and the transport plan removes the hardest decisions.</p></div>
+    </article>
+
+    <article class="daycard">
+      <div><div class="day">Monday</div><strong>Sep 28</strong><br><span class="tag">HISTORY</span><span class="tag">SAMBA</span></div>
+      <div><h3>Little Africa into Pedra do Sal</h3><div class="plan">
+        <div class="slot rest"><span class="time">Morning</span><p>Sleep in, pool time and a slow breakfast after game day.</p></div>
+        <div class="slot"><span class="time">2:30-5:30 PM</span><p>Private Little Africa food-and-history walk through Saúde and the port district.</p></div>
+        <div class="slot"><span class="time">Evening</span><p>Dinner, then organized samba around Pedra do Sal. Keep a driver available for an easy exit.</p></div>
+      </div><p class="why">Why it works: the history, food and samba are in the same area, so there is no cross-city zigzagging.</p></div>
+    </article>
+
+    <article class="daycard">
+      <div><div class="day">Tuesday</div><strong>Sep 29</strong><br><span class="tag">DEPARTURE</span></div>
+      <div><h3>A soft landing before the flight home</h3><div class="plan">
+        <div class="slot"><span class="time">Morning</span><p>Breakfast, final pool or neighborhood walk and packing.</p></div>
+        <div class="slot"><span class="time">Departure</span><p>Pre-arranged GIG transfer with a large traffic buffer.</p></div>
+      </div><p class="why">Why it works: no ticketed activity competes with checkout, luggage or airport timing.</p></div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Book these first</h2>
+    <div class="checklist">
+      <label><input type="checkbox"> Airbnb #1 or preferred direct Airbnb listing</label>
+      <label><input type="checkbox"> NFL tickets through official channels</label>
+      <label><input type="checkbox"> Full-trip driver and game-day meeting point</label>
+      <label><input type="checkbox"> Corcovado timed train ticket</label>
+      <label><input type="checkbox"> Sugarloaf sunset ticket</label>
+      <label><input type="checkbox"> Private Tijuca guide</label>
+      <label><input type="checkbox"> Little Africa guide</label>
+      <label><input type="checkbox"> Optional private samba lesson</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cultural experiences: booking shortcuts</h2>
+    <table>
+      <thead><tr><th>Experience</th><th>Recommended timing</th><th>Book here / logistics</th></tr></thead>
+      <tbody>
+        <tr><td>Private Santa Teresa + Selarón cultural tour</td><td>Friday instead of the group tour, or Saturday late morning instead of Tijuca.</td><td><a href="https://www.rioculturalsecrets.com/tour-santa-teresa-rio-de-janeiro/">Rio Cultural Secrets</a>: private 4-5 hours, about US$250 per group up to four, vehicle/pickup included; food and tickets extra. Pair with Bar do Mineiro.</td></tr>
+        <tr><td>Selarón Steps independently</td><td>Daylight only; skip a repeat if the Friday all-in-one tour is booked.</td><td>No separate attraction ticket. Use the chauffeur, <a href="https://www.viator.com/Rio-de-Janeiro-attractions/Selaron-Steps-Escadaria-Selaron/d712-a13341">Viator</a> or <a href="https://www.getyourguide.com/en-gb/escadaria-selaron-l5213/">GetYourGuide</a>.</td></tr>
+        <tr><td>Salgueiro samba-school rehearsal</td><td>Saturday Sep 26 evening; keep the day light and expect return around 1 AM.</td><td><a href="https://www.getyourguide.com/rio-de-janeiro-l9/rio-salgueiro-samba-school-rehearsal-admission-w-transfer-t425301/">GetYourGuide</a> recently showed about US$78 per person with guide, ticket, shared table and transfers. Santa Teresa guests meet at Vila Galé Hotel in Centro; confirm Sep 26 availability and exact pickup.</td></tr>
+        <tr><td>Bar do Mineiro</td><td>Lunch after Santa Teresa; reserve ahead for the weekend.</td><td><a href="https://www.getin.app/rio-de-janeiro/bar-do-mineiro">Reserve or join the Get In queue</a>. Rua Paschoal Carlos Magno, 99, Santa Teresa.</td></tr>
+        <tr><td>Private guide + translator</td><td>Four-hour cultural/photography block Friday or Monday; many museums close Monday.</td><td><a href="https://gowithguide.com/brazil/tour/rio-de-janeiro-private-tour-guide-and-translator-services-8216">GoWithGuide</a>: recently US$150 per group, up to four, sedan included; meals and tickets extra.</td></tr>
+        <tr><td>The Maze Rio</td><td>Conditional only—do not build the schedule around it.</td><td>Check <a href="https://www.instagram.com/themaze_rio/">current social updates</a> and have the concierge verify hours, event status, access and transport. Do not rely on old opening hours.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Book the VIP support as one coordinated plan</h2>
+    <div class="base"><strong>Start in Airbnb Messages.</strong> Before selecting a nonrefundable rate, ask whether the property permits an outside chef, photographer, guide and samba instructor. Keep the lodging conversation, reservation and payment on Airbnb.</div>
+    <table>
+      <thead><tr><th>Service</th><th>What to request in writing</th><th>Where to start</th></tr></thead>
+      <tbody>
+        <tr><td>Chauffeur + airport welcome</td><td>AA905 flight monitoring; GIG name sign; luggage help; English-speaking chauffeur; vehicle for 3 plus bags; Sep 24-29 standby hours; parking, tolls and overtime; driver name/plate; Sep 27 Maracanã drop and fixed postgame meeting point.</td><td><a href="https://www.aurumexecutive.com.br/en/">Aurum Executive</a> or <a href="https://riotransporteexecutivo.com.br/en">Rio Transporte Executivo</a>; compare written quotes.</td></tr>
+        <tr><td>Stocked arrival + chef</td><td>Shopping list and spending cap; receipts; allergies; menu; groceries; service and cleanup; kitchen access; vendor IDs.</td><td>Ask the Airbnb host first. Rio001’s host advertises concierge support including private-chef arrangements.</td></tr>
+        <tr><td>Guide + photographer</td><td>English-speaking registered guide; Christ/Sugarloaf timed tickets; Little Africa expertise; photographer hours; number of edited images; delivery date; usage rights.</td><td>Ask the host for a vetted team and verify the guide/provider at <a href="https://www.cadastur.turismo.gov.br/">Cadastur</a>.</td></tr>
+        <tr><td>Samba + live-music table</td><td>Private lesson location/language; instructor ID; flexible start; reserved venue/table; cover or minimum spend; cancellation; chauffeur wait and return.</td><td><a href="https://www.sambaclassrio.com/book-online">Samba Class Rio</a> lists English private lessons and dance-night options; confirm the exact venue and transport.</td></tr>
+      </tbody>
+    </table>
+    <div class="base"><strong>Copy/paste request:</strong> Rio VIP service request · Sep 24-29, 2026 · 3 travelers. Please quote GIG meet-and-greet for AA905, luggage help, stocked arrival, a bilingual chauffeur through Sep 29, Sep 27 Maracanã transport, a private chef meal, restaurant reservations, a registered guide and photographer for Christ/Sugarloaf/Little Africa, and a private samba lesson plus reserved live-music table. Itemize staffing, tickets, groceries, vehicle, parking/tolls, waiting/overtime, cancellation terms and payment schedule.</div>
+  </section>
+
+  <section>
+    <h2>Keep the week easy</h2>
+    <table>
+      <thead><tr><th>Decision</th><th>Simple rule</th></tr></thead>
+      <tbody>
+        <tr><td>Transportation</td><td>Use one dedicated driver for airport, landmarks, Saturday touring and game day.</td></tr>
+        <tr><td>Restaurants</td><td>Book only one important dinner. Leave the rest flexible or eat at the property.</td></tr>
+        <tr><td>Energy</td><td>Protect the daily rest block. Treat optional activities as truly optional.</td></tr>
+        <tr><td>Weather</td><td>Swap Friday and Saturday if clouds hide Christ or Sugarloaf.</td></tr>
+        <tr><td>Group coordination</td><td>Choose one departure time and one meetup point; send both in the group chat each morning.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">Distances, live Airbnb links and lodging details remain in the <a href="rio-trip-interactive-map.html">full interactive guide</a>. Transportation references: <a href="https://www.metrorio.com.br/como-pagar/meios-e-tarifas">MetrôRio fares</a>, <a href="https://www.metrorio.com.br/Estacoes?p_ponto=42">São Cristóvão station</a> and <a href="https://www.riogaleao.com/">RIOgaleão</a>. Confirm weather, ticket times, special event transport operations and exact Airbnb availability before paying.</footer>
+</main>
+</body>
+</html>
