@@ -1,3 +1,5 @@
+import TripExplorer from './TripExplorer';
+
 const quickLinks = [
   { number: '1', title: 'Choose your home', detail: 'Start with the ranked stays. Pick one, then stop comparing.', href: '#stays' },
   { number: '2', title: 'Follow the easy plan', detail: 'One main experience each day, with breathing room built in.', href: '#easy-plan' },
@@ -58,7 +60,7 @@ export default function Home() {
 
       <section className="details-section" id="details" aria-labelledby="details-heading">
         <div className="section-heading"><p className="eyebrow">Go deeper only when needed</p><h2 id="details-heading">Interactive map, all stays & every detail</h2><p>Tap a stay to see its distance to every activity. Use the tabs for culture, safety, booking links, costs and transport.</p></div>
-        <div className="guide-frame" aria-label="Interactive Rio trip guide"><iframe title="Interactive Rio trip guide" src="/guide.html" /></div>
+        <TripExplorer />
         <a className="text-link" href="/guide.html" target="_blank" rel="noreferrer">Open full-screen details →</a>
       </section>
 
