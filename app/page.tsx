@@ -51,6 +51,17 @@ export default function Home() {
         <ol className="booking-list"><li><strong>Stay</strong><span>Choose a ranked Airbnb below. Hold it before building the rest of the trip.</span></li><li><strong>Game tickets</strong><span>Maracanã is the fixed event. Plan the private car around it.</span></li><li><strong>Christ + Sugarloaf</strong><span>Book the guided experience with train and transport.</span></li><li><strong>Driver</strong><span>Arrange airport meet-and-greet and a security-aware driver for the key days.</span></li></ol>
       </section>
 
+      <section className="checklist-section" aria-labelledby="checklist-heading">
+        <div className="section-heading"><p className="eyebrow">Before you pay</p><h2 id="checklist-heading">The five things to confirm</h2><p>These are the trip-protection decisions. Finish them before buying nonrefundable items.</p></div>
+        <div className="checklist-grid">
+          <article><strong>1 · Game day</strong><p>Ravens–Cowboys is <b>Sunday, Sept. 27</b> at Maracanã. Confirm ticket section, transfer method, bag rules and private-driver pickup zone.</p></article>
+          <article><strong>2 · Protected flights</strong><p>Confirm the three travelers’ connections and AA905 together. Prefer one protected itinerary per traveler; confirm the actual seat map before buying.</p></article>
+          <article><strong>3 · Travel documents</strong><p>Check passport validity and Brazil entry/visa rules for each traveler’s nationality before choosing nonrefundable fares.</p></article>
+          <article><strong>4 · Airbnb final total</strong><p>Verify exact dates, capacity, beds, cancellation policy and all-in total directly in Airbnb.</p></article>
+          <article><strong>5 · Named transport plan</strong><p>Get the driver’s WhatsApp, luggage capacity, meet-and-greet instructions, game-day route, backup vehicle and payment terms in writing.</p></article>
+        </div>
+      </section>
+
       <section className="stays-section" id="stays" aria-labelledby="stays-heading">
         <div className="section-heading"><p className="eyebrow">Stay decision</p><h2 id="stays-heading">Start with these three</h2><p>They make the biggest difference to how easy the trip feels.</p></div>
         <div className="stay-cards">
