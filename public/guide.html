@@ -1390,6 +1390,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     stay.append(&quot;text&quot;).attr(&quot;class&quot;,&quot;pin-text&quot;).text(d=&gt;d.n);
   }
   select.addEventListener(&quot;change&quot;,()=&gt;{selected=stays.find(s=&gt;s.id===select.value);updateDetails();draw();});
+  window.addEventListener(&quot;message&quot;,(event)=&gt;{const stayId=event.data?.rioStay;if(stays.some(s=&gt;s.id===stayId)){select.value=stayId;selected=stays.find(s=&gt;s.id===stayId);updateDetails();draw();root.scrollIntoView({behavior:&quot;smooth&quot;,block:&quot;start&quot;});}});
   new ResizeObserver(draw).observe(root);
   updateDetails();draw();
 })();
@@ -1747,5 +1748,12 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 "></iframe>
+<script>
+(() => {
+  const stay = new URLSearchParams(window.location.search).get('stay');
+  const frame = document.querySelector('iframe[title="Rio Stay Map"]');
+  if (stay && frame) frame.addEventListener('load', () => frame.contentWindow?.postMessage({ rioStay: stay }, '*'));
+})();
+</script>
 </body>
 </html>
