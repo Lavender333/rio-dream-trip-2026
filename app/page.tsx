@@ -1,4 +1,5 @@
 import TripExplorer from './TripExplorer';
+import TripBuilder from './TripBuilder';
 
 const quickLinks = [
   { number: '1', title: 'Choose your home', detail: 'Start with the ranked stays. Pick one, then stop comparing.', href: '#stays' },
@@ -21,7 +22,7 @@ export default function Home() {
         <p className="eyebrow">September 24–29, 2026 · Rio de Janeiro</p>
         <h1>A calm, exciting Rio plan—<br /><em>without the overwhelm.</em></h1>
         <p className="hero-copy">This is your one place for the stay, the fun, the transport and the costs. Begin with the next small decision; every extra detail is there when you want it.</p>
-        <div className="hero-actions"><a className="button button-primary" href="#easy-plan">Show me the easy plan <span>↓</span></a><a className="button button-secondary" href="#details">Open the interactive map</a></div>
+        <div className="hero-actions"><a className="button button-primary" href="#planner">Start with flights <span>↓</span></a><a className="button button-secondary" href="/guide.html" target="_blank" rel="noreferrer">Open the interactive map ↗</a></div>
         <div className="trip-facts" aria-label="Trip overview"><div><strong>5</strong><span>nights</span></div><div><strong>10</strong><span>Airbnb options</span></div><div><strong>1</strong><span>big game day</span></div></div>
       </section>
 
@@ -42,6 +43,8 @@ export default function Home() {
         </div>
         <a className="text-link" href="/rio-easy-fun-itinerary.html" target="_blank" rel="noreferrer">Open the full easy-and-fun itinerary →</a>
       </section>
+
+      <TripBuilder />
 
       <section className="booking-section" id="book-first" aria-labelledby="book-heading">
         <div className="section-heading"><p className="eyebrow">When you are ready</p><h2 id="book-heading">Book these first</h2></div>
