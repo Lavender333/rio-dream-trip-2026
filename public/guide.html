@@ -1038,7 +1038,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;div id=&quot;rio-stay-map&quot;&gt;
   &lt;h2&gt;Rio lodging and itinerary map&lt;/h2&gt;
   &lt;p class=&quot;rio-trip-dates&quot;&gt;&lt;strong&gt;Trip:&lt;/strong&gt; Thursday, September 24 to Tuesday, September 29, 2026 · 5 nights&lt;/p&gt;
-  &lt;p&gt;&lt;a class=&quot;btn&quot; href=&quot;rio-easy-fun-itinerary.html&quot;&gt;Open the relaxed, easy + fun itinerary&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a class=&quot;btn&quot; id=&quot;rio-easy-link&quot; href=&quot;rio-easy-fun-itinerary.html&quot;&gt;Open the relaxed, easy + fun itinerary&lt;/a&gt;&lt;/p&gt;
   &lt;div class=&quot;rio-game-alert&quot; role=&quot;note&quot;&gt;&lt;strong&gt;MAIN EVENT - MARACANÃ&lt;/strong&gt;&lt;span&gt;Baltimore Ravens vs. Dallas Cowboys · Sunday, September 27, 2026 · 5:25 PM Rio time&lt;/span&gt;&lt;/div&gt;
   &lt;section class=&quot;rio-culture-card&quot; aria-labelledby=&quot;rio-culture-title&quot;&gt;
     &lt;h2 id=&quot;rio-culture-title&quot;&gt;Rio culture — enjoy it without the culture shock&lt;/h2&gt;
@@ -1396,6 +1396,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     const labels={beach:&quot;Ipanema / beach day&quot;,shopping:&quot;Mall shopping&quot;,game:&quot;Maracanã game&quot;,forest:&quot;Tijuca Forest&quot;,africa:&quot;Little Africa&quot;};
     const chosen=(plan.activities||[]).map(id=&gt;labels[id]||attractions.find(a=&gt;a.id===id)?.name).filter(Boolean).join(&quot; · &quot;)||&quot;All activities shown&quot;;
     context.innerHTML=&quot;&lt;strong&gt;Your selected trip&lt;/strong&gt;&lt;br&gt;&quot;+outbound+&quot; · &quot;+returning+&quot;&lt;br&gt;&lt;span class=&quot;text-muted&quot;&gt;Chosen experiences: &quot;+chosen+&quot;. The highlighted stay and its distances below match this plan.&lt;/span&gt;&quot;;
+    const easy=root.querySelector(&quot;#rio-easy-link&quot;);if(easy){const q=new URLSearchParams({departure:plan.departure||&quot;wed&quot;,returnDay:plan.returnDay||&quot;tue&quot;,activities:(plan.activities||[]).join(&quot;,&quot;)});easy.href=&quot;rio-easy-fun-itinerary.html?&quot;+q.toString();}
   }
   window.addEventListener(&quot;message&quot;,(event)=&gt;{const stayId=event.data?.rioStay;if(stays.some(s=&gt;s.id===stayId)){select.value=stayId;selected=stays.find(s=&gt;s.id===stayId);updateDetails();draw();root.scrollIntoView({behavior:&quot;smooth&quot;,block:&quot;start&quot;});}showPlanContext(event.data?.rioPlan);});
   new ResizeObserver(draw).observe(root);

@@ -35,6 +35,7 @@
   <header class="hero">
     <h1>Rio, the easy + fun way</h1>
     <p class="sub">A low-stress plan beginning with the shared overnight flight on Wednesday, September 23 and continuing through Tuesday, September 29, 2026. It keeps the iconic Rio experience, but limits backtracking, decision overload and overpacked days.</p>
+    <div class="base" id="selected-plan"><strong>Selected plan:</strong> Recommended Wednesday arrival and Tuesday return. Change these choices in the planner to update this page.</div>
     <div class="base"><strong>Recommended base: Airbnb #1, the Harbourside 6-bedroom villa in Santa Teresa.</strong> It gives the easiest access to Maracanã, Lapa and Little Africa while keeping Christ, Sugarloaf and the beaches manageable with a private driver. Choose Airbnb #4, Rio001 in Copacabana, if beachfront energy and a host-advertised 24/7 concierge matter more than game-day convenience.</div>
     <div class="principles"><div>One main anchor each day</div><div>Rest before every evening event</div><div>Private driver for fixed-time plans</div></div>
   </header>
@@ -244,5 +245,24 @@
 
   <footer class="footer">Distances, live Airbnb links and lodging details remain in the <a href="rio-trip-interactive-map.html">full interactive guide</a>. Transportation references: <a href="https://www.metrorio.com.br/como-pagar/meios-e-tarifas">MetrôRio fares</a>, <a href="https://www.metrorio.com.br/Estacoes?p_ponto=42">São Cristóvão station</a> and <a href="https://www.riogaleao.com/">RIOgaleão</a>. Confirm weather, ticket times, special event transport operations and exact Airbnb availability before paying.</footer>
 </main>
+<script>
+(() => {
+  const params=new URLSearchParams(location.search), departure=params.get('departure')||'wed', returnDay=params.get('returnDay')||'tue';
+  const arrival={wed:'Thursday, Sep 24',thu:'Friday, Sep 25',fri:'Saturday, Sep 26'}[departure];
+  const selected=(params.get('activities')||'').split(',').filter(Boolean);
+  const activityNames={christ:'Christ by train',sugar:'Sugarloaf',beach:'Ipanema beach',shopping:'Mall shopping',samba:'Samba',game:'Maracanã game',forest:'Tijuca Forest',africa:'Little Africa'};
+  const activityText=selected.map(x=>activityNames[x]).filter(Boolean).join(' · ')||'No activities selected yet';
+  const returnText=returnDay==='mon'?'Leave Monday night: Monday is for packing, late checkout and the group airport transfer.':'Leave Tuesday night: Monday remains open for Little Africa, beach time or recovery.';
+  document.querySelector('#selected-plan').innerHTML='<strong>Your selected plan:</strong> arrive '+arrival+' · '+returnText+'<br><span>Chosen experiences: '+activityText+'.</span>';
+  document.querySelector('.sub').textContent='This itinerary is adjusted for a '+departure+' group departure, '+arrival+' arrival and a '+(returnDay==='mon'?'Monday':'Tuesday')+' Rio departure. It keeps the iconic Rio experience without overpacking the available days.';
+  if(returnDay==='mon'){
+    const monday=[...document.querySelectorAll('.daycard')].find(card=>card.textContent.includes('Monday'));
+    if(monday){monday.innerHTML='<div><div class="day">Monday</div><strong>Sep 28</strong><br><span class="tag">DEPARTURE</span></div><div><h3>Pack, rest and leave Rio together</h3><div class="plan"><div class="slot rest"><span class="time">Daytime</span><p>Late checkout when possible, pack, keep meals simple and do not schedule Little Africa or a long tour.</p></div><div class="slot"><span class="time">Evening</span><p>Take the pre-booked group transfer to GIG for AA904. Everyone leaves Rio together.</p></div></div></div>';}
+  }
+  if(departure!=='wed'){
+    const note=document.createElement('div');note.className='base';note.innerHTML='<strong>Timing adjustment:</strong> This choice arrives later than the recommended Wednesday departure. Keep the Sunday game fixed; treat the first available Rio day as recovery first, then choose only the highest-priority activities above.';document.querySelector('#plan-title').after(note);
+  }
+})();
+</script>
 </body>
 </html>
